@@ -1,0 +1,4 @@
+venv
+.env
+client_secrets*.json
+.playlists
