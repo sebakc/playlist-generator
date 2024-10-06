@@ -30,19 +30,20 @@ This project generates playlists using the OpenAI API.
     ```
 
 2. Create a `client_secrets.json` file in the root directory with your Google API credentials:
-    ```json
-    {
-      "installed": {
-        "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
-        "project_id": "YOUR_PROJECT_ID",
-        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-        "token_uri": "https://oauth2.googleapis.com/token",
-        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-        "client_secret": "YOUR_CLIENT_SECRET",
-        "redirect_uris": ["http://localhost"]
-      }
-    }
-    ```
+```json
+{
+  "installed": {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "project_id": "YOUR_PROJECT_ID",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "redirect_uris": ["http://localhost"]
+  }
+}
+```
+
 ## How to Create YouTube API Credentials (`client_secrets.json`)
 
 To interact with the YouTube API and create playlists, you need to set up OAuth 2.0 credentials and download a `client_secrets.json` file. Follow these steps to create the necessary credentials:
@@ -95,7 +96,7 @@ The downloaded file will look something like this:
     ]
   }
 }
-
+```
 
 ## Usage
 
@@ -103,8 +104,10 @@ The downloaded file will look something like this:
     ```sh
     python app.py
     ```
-
-2. Follow the on-screen instructions to generate your playlist.
+2. Follow the on-screen instructions to generate your playlist or clean up previously created playlists using the --clean flag:
+    ```sh
+    python app.py --clean
+    ```
 
 ## License
 
